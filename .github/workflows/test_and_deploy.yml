@@ -70,6 +70,8 @@ jobs:
     needs: [test]
     runs-on: ubuntu-latest
     if: contains(github.ref, 'tags')
+    permissions:
+      id-token: write
     steps:
       - uses: actions/checkout@v4
       - name: Set up Python
