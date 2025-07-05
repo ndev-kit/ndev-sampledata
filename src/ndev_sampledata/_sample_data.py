@@ -10,9 +10,12 @@ Replace code below according to your needs.
 from __future__ import annotations
 
 from pathlib import Path
+from typing import TYPE_CHECKING
 
 from bioio import BioImage
-from napari.types import LayerDataTuple
+
+if TYPE_CHECKING:
+    from napari.types import LayerDataTuple
 
 sample_dir = Path(__file__).parent / "samples"
 
