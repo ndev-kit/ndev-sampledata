@@ -3,6 +3,6 @@ try:
 except ImportError:
     __version__ = "unknown"
 
-from ._sample_data import make_sample_data
+from ._sample_data import ndev_logo
 
-__all__ = ("make_sample_data",)
+__all__ = ("ndev_logo",)
