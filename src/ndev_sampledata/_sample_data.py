@@ -79,8 +79,9 @@ def scratch_assay() -> list[LayerDataTuple]:
     ch0 = (
         img.get_image_data("TYX", C=0),
         {
-            "name": img.channel_names[0],
+            "name": "H3342",  # img.channel_names[0],
             "blending": "translucent_no_depth",
+            "contrast_limits": (400, 3500),
             "colormap": "cyan",
             "scale": scale,
         },
@@ -89,7 +90,7 @@ def scratch_assay() -> list[LayerDataTuple]:
     ch1 = (
         img.get_image_data("TYX", C=1),
         {
-            "name": img.channel_names[1],
+            "name": "Oblique",  # img.channel_names[1],
             "blending": "additive",
             "colormap": "gray",
             "scale": scale,
@@ -99,7 +100,7 @@ def scratch_assay() -> list[LayerDataTuple]:
     ch2 = (
         img.get_image_data("TYX", C=2),
         {
-            "name": img.channel_names[2],
+            "name": "nuclei",  # img.channel_names[2],
             "blending": "additive",
             "opacity": 0.5,
             "scale": scale,
@@ -109,7 +110,7 @@ def scratch_assay() -> list[LayerDataTuple]:
     ch3 = (
         img.get_image_data("TYX", C=3),
         {
-            "name": img.channel_names[3],
+            "name": "cytoplasm",  # img.channel_names[3],
             "blending": "additive",
             "opacity": 0.5,
             "scale": scale,
@@ -125,7 +126,7 @@ def neocortex() -> list[LayerDataTuple]:
     ch0 = (
         img.get_image_data("YX", C=0),
         {
-            "name": img.channel_names[0],
+            "name": "CTIP2",  # img.channel_names[0],
             "blending": "translucent_no_depth",
             "colormap": "cyan",
             "scale": scale,
@@ -134,7 +135,7 @@ def neocortex() -> list[LayerDataTuple]:
     ch1 = (
         img.get_image_data("YX", C=1),
         {
-            "name": img.channel_names[1],
+            "name": "BRN2",  # img.channel_names[1],
             "blending": "additive",
             "colormap": "yellow",
             "scale": scale,
@@ -143,7 +144,7 @@ def neocortex() -> list[LayerDataTuple]:
     ch2 = (
         img.get_image_data("YX", C=2),
         {
-            "name": img.channel_names[2],
+            "name": "ROR",  # img.channel_names[2],
             "blending": "additive",
             "colormap": "magenta",
             "scale": scale,
