@@ -18,12 +18,21 @@ contributions:
     - id : ndev-sampledata.make_neocortex
       python_name: ndev_sampledata._sample_data:neocortex
       title: Load neocortex data
+    - id: ndev-sampledata.make_neuron_raw
+      python_name: ndev_sampledata._sample_data:neuron_raw
+      title: Load raw neuron data
+    - id: ndev-sampledata.make_neuron_labels
+      python_name: ndev_sampledata._sample_data:neuron_labels
+      title: Load neuron labels data
+    - id: ndev-sampledata.make_neuron_labels_processed
+      python_name: ndev_sampledata._sample_data:neuron_labels_processed
+      title: Load processed neuron labels data
   sample_data:
     - command: ndev-sampledata.make_ndev_logo
       display_name: ndev logo
       key: unique_id.0
     - command: ndev-sampledata.make_neuron_2d_4ch
-      display_name: Neuron (2D+4Ch)
+      display_name: Neuron Cropped (2D+4Ch)
       key: unique_id.1
     - command: ndev-sampledata.make_scratch_assay
       display_name: Scratch Assay Labeled (10T+2Ch)
@@ -31,3 +40,12 @@ contributions:
     - command: ndev-sampledata.make_neocortex
       display_name: Neocortex (3Ch)
       key: unique_id.3
+    - command: ndev-sampledata.make_neuron_raw
+      display_name: Neuron Raw (2D+4Ch) (32MB)
+      key: unique_id.4
+    - command: ndev-sampledata.make_neuron_labels
+      display_name: Neuron Labels (2D+4Ch)
+      key: unique_id.5
+    - command: ndev-sampledata.make_neuron_labels_processed
+      display_name: Neuron Labels Processed (2D+4Ch)
+      key: unique_id.6
