@@ -29,20 +29,20 @@ requires-python = ">=3.10"
 # or any other Qt bindings directly (e.g. PyQt5, PySide2).
 # See best practices: https://napari.org/stable/plugins/building_a_plugin/best_practices.html
 dependencies = [
-    "bioio",
-    "bioio-imageio",
-    "bioio-ome-tiff",
+    "pooch",
+    "ndevio>=0.5.2",
+    # "bioio",
+    # "bioio-imageio",
+    # "bioio-ome-tiff",
 ]
 
-[project.optional-dependencies]
-# Allow easily installation with the full, default napari installation
-# (including Qt backend) using ndev-sampledata[all].
-all = ["napari[all]"]
-testing = [
-    "napari",
-    "tox",
-    "pytest",  # https://docs.pytest.org/en/latest/contents.html
-    "pytest-cov",  # https://pytest-cov.readthedocs.io/en/latest/
+[dependency-groups]
+dev = [
+    "tox-uv",
+    "pytest",
+    "pytest-cov",
+    "pre-commit",
+    "napari[pyqt6]",
 ]
 
 [project.entry-points."napari.manifest"]
